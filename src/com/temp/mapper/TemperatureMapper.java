@@ -12,7 +12,9 @@ public class TemperatureMapper {
         TempExcel tempExcel = new TempExcel();
 
         tempExcel.setDateFrom(temperature.getDateFrom());
-        tempExcel.setTimeFrom(getTime(temperature.getTimeFrom()));
+        if(temperature.getTimeFrom().length() == 4) {
+            tempExcel.setTimeFrom(getTime(temperature.getTimeFrom()));
+        }
 
         tempExcel.setDateTo(temperature.getDateTo());
         tempExcel.setTimeTo(getTime(temperature.getTimeTo()));
@@ -34,11 +36,17 @@ public class TemperatureMapper {
     }
 
     private static int getMinute(String timeFrom) {
+        if(timeFrom.charAt(2) != 0) {
+            return Integer.valueOf(timeFrom.substring(2));
+        }
         return Integer.valueOf(timeFrom.substring(3));
     }
 
     private static int getHour(String timeFrom) {
-        return Integer.valueOf(timeFrom.substring(0,2));
+        if(timeFrom.charAt(0) != 0) {
+            return Integer.valueOf(timeFrom.substring(0, 2));
+        }
+        return Integer.valueOf(timeFrom.substring(1, 2));
     }
 
 }

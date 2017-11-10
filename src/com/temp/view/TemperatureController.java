@@ -5,7 +5,6 @@ import com.temp.builder.ExcelBuilder;
 import com.temp.model.TempType;
 import com.temp.model.Temperature;
 import com.temp.widget.MaskField;
-import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -64,6 +63,8 @@ public class TemperatureController {
                         if(newValue != null)
                             saveToFields(newValue);
 
+                        //jesli nowa wartosc nie jest pierwsza, zamknij pola 
+                        disableFields(newValue);
                     }
                 ));
 
@@ -71,6 +72,12 @@ public class TemperatureController {
         tempTwoLabel.setDisable(true);
 
         typeComboBox.setItems(FXCollections.observableArrayList(TempType.CARRIER, TempType.THERMO_KING));
+    }
+
+    private void disableFields(Temperature newValue) {
+        boolean disable = mainApp.getTemperatures().indexOf(newValue) != 0;
+        dateFromField.setDisable(disable);
+        timeFromField.setDisable(disable);
     }
 
     private void saveToFields(Temperature newValue) {
@@ -96,6 +103,8 @@ public class TemperatureController {
             oldValue.setTemp2(Float.valueOf(tempTwoField.getText()));
         oldValue.setDiff(Float.valueOf(diffField.getText()));
         oldValue.setHasSecond(secondTempCheckBox.selectedProperty().getValue());
+        oldValue.setRegistery(registeryField.getText());
+        oldValue.setType(typeComboBox.getValue());
     }
 
     /**
@@ -128,9 +137,11 @@ public class TemperatureController {
 
         saveFromFields(tempTable.getSelectionModel().getSelectedItem());//zapisujemy aktualne wartosci dla pewnosci
 
-        ExcelBuilder excelBuilder = new ExcelBuilder(mainApp.getTemperatures());
+        //TODO : walidacja pol?
+
+        ExcelBuilder excelBuilder = new ExcelBuilder();
         try {
-            excelBuilder.buildExcel();
+            excelBuilder.buildExcel(mainApp.getTemperatures(), registeryField.getText());
         } catch (Exception e) {
             e.printStackTrace();
         }

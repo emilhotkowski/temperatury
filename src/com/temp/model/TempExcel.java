@@ -102,4 +102,20 @@ public class TempExcel {
     public void setHasSecond(boolean hasSecond) {
         this.hasSecond = hasSecond;
     }
+
+    @Override
+    public String toString() {
+        return "TempExcel{" +
+                "dateFrom=" + dateFrom +
+                ", timeFrom=" + timeFrom +
+                ", dateTo=" + dateTo +
+                ", timeTo=" + timeTo +
+                ", temp=" + temp +
+                ", temp2=" + temp2 +
+                ", diff=" + diff +
+                ", regestiry='" + regestiry + '\'' +
+                ", type=" + type +
+                ", hasSecond=" + hasSecond +
+                '}';
+    }
 }
