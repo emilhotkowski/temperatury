@@ -53,7 +53,7 @@ public class TextBuilder {
         if(beginning) {
             sb.append("----");
         } else {
-            sb.append(accTemp);
+            sb.append(tempExcel.getTemp());
         }
 
         sb.append(", ");
@@ -142,7 +142,7 @@ public class TextBuilder {
         int defrostCount = Helper.getRand(4, 8);
 
         //dopoki nie nadszedl koniec
-        while(until.isAfter(accTime)) {
+        while(until.isAfter(accTime.plusMinutes(30))) {
             actualizeTemp(tempExcel);
             if(defrostCount == 0) {
                 defrostMe(tempExcel);

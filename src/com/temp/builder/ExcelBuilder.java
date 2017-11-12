@@ -5,6 +5,7 @@ import com.temp.model.TempExcel;
 import com.temp.model.Temperature;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Cell;
+import org.apache.poi.hssf.record.Margin;
 import org.apache.poi.xssf.usermodel.*;
 
 import java.io.File;
@@ -42,6 +43,8 @@ public class ExcelBuilder {
 
     private void configureSpreadsheet() {
         //TODO: marginesy ?
+        spreadsheet.setMargin(XSSFSheet.BottomMargin, 0.65);
+        spreadsheet.setMargin(XSSFSheet.TopMargin, 0.65);
 
         //col sizes
         int i = 0;
@@ -96,10 +99,10 @@ public class ExcelBuilder {
     private void saveExcel(String name) {
         FileOutputStream out = null;
         try {
-            out = new FileOutputStream(new File(name+ ".xlsx"));
+            out = new FileOutputStream(new File("temperatury\\" + name+ ".xlsx"));
             workbook.write(out);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Nie mozna zapisac pliku",e );
         }
     }
 

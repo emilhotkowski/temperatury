@@ -130,6 +130,11 @@ public class TemperatureController {
     @FXML
     private void deleteTemperature() {
         mainApp.getTemperatures().remove(tempTable.getSelectionModel().getSelectedItem());
+        int i = 1;
+        for (Temperature temperature : mainApp.getTemperatures()) {
+            temperature.setId("Temperatura " + i++);
+        }
+        Temperature.number = i-1;
     }
 
     @FXML
@@ -140,10 +145,20 @@ public class TemperatureController {
         //TODO : walidacja pol?
 
         ExcelBuilder excelBuilder = new ExcelBuilder();
+        boolean error = false;
         try {
             excelBuilder.buildExcel(mainApp.getTemperatures(), registeryField.getText());
         } catch (Exception e) {
+            error = true;
             e.printStackTrace();
+        }
+
+        if(error) {
+            Alert alert = new Alert(Alert.AlertType.ERROR.CONFIRMATION, "Pojawił się błąd", ButtonType.OK);
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Temperatura stworzona pod nazwa : " + registeryField.getText() + ".xlsx", ButtonType.OK);
+            alert.showAndWait();
         }
     }
 

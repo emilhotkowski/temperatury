@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Temperature {
 
-    static Integer number = 0;
+    static public Integer number = 0;
 
     public Temperature() {
         number++;
@@ -161,5 +161,9 @@ public class Temperature {
 
     public void setHasSecond(boolean hasSecond) {
         this.hasSecond.set(hasSecond);
+    }
+
+    public void setId(String id) {
+        this.id.set(id);
     }
 }
