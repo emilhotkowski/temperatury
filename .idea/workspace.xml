@@ -7,35 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0418427d-db2c-4849-897c-a6d82f281868" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Carrier.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/thermo king.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/temperatury_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/naczepy.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/temp/model/Truck.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ASD.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/Main.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Carrier.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/thermo king.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/temperatury_master_jar/temperatury-master.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/builder/ExcelBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/builder/Helper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/builder/TextBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/mapper/TemperatureMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/model/TempExcel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/model/TempType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/model/Temperature.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/view/TemperatureController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/widget/MaskField$Position.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/widget/MaskField.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/temperatury/ASD.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/temperatury-master/com/temp/view/temperature.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/temperatury-master.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/temperatury_jar/temperatury.jar" afterPath="$PROJECT_DIR$/out/artifacts/temperatury_jar/temperatury.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/builder/ExcelBuilder.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/builder/ExcelBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/builder/Helper.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/builder/Helper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/builder/TextBuilder.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/builder/TextBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/mapper/TemperatureMapper.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/mapper/TemperatureMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/model/TempExcel.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/model/TempExcel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/model/Temperature.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/model/Temperature.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/view/TemperatureController.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/view/TemperatureController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/widget/MaskField$Position.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/widget/MaskField$Position.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/widget/MaskField.class" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/widget/MaskField.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/temperatury/com/temp/view/temperature.fxml" afterPath="$PROJECT_DIR$/out/production/temperatury/com/temp/view/temperature.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/Main.java" afterPath="$PROJECT_DIR$/src/com/temp/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naczepy.csv" afterPath="$PROJECT_DIR$/naczepy.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java" afterPath="$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/builder/Helper.java" afterPath="$PROJECT_DIR$/src/com/temp/builder/Helper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java" afterPath="$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/mapper/TemperatureMapper.java" afterPath="$PROJECT_DIR$/src/com/temp/mapper/TemperatureMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/model/TempExcel.java" afterPath="$PROJECT_DIR$/src/com/temp/model/TempExcel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/model/Temperature.java" afterPath="$PROJECT_DIR$/src/com/temp/model/Temperature.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/view/TemperatureController.java" afterPath="$PROJECT_DIR$/src/com/temp/view/TemperatureController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/view/temperature.fxml" afterPath="$PROJECT_DIR$/src/com/temp/view/temperature.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/temp/widget/MaskField.java" afterPath="$PROJECT_DIR$/src/com/temp/widget/MaskField.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temperatury.iml" afterPath="$PROJECT_DIR$/temperatury.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,11 +56,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExcelBuilder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExcelBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="289" column="19" lean-forward="true" selection-start-line="289" selection-start-column="19" selection-end-line="289" selection-end-column="19" />
+            <state relative-caret-position="285">
+              <caret line="52" column="24" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TruckHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/temp/helper/TruckHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/naczepy.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="8" />
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -78,8 +93,8 @@
       <file leaf-file-name="TextBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+            <state relative-caret-position="551">
+              <caret line="142" column="36" lean-forward="false" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,13 +102,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="temperature.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/temp/view/temperature.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="85" column="103" lean-forward="false" selection-start-line="85" selection-start-column="103" selection-end-line="85" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/temp/builder/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TemperatureController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/temp/view/TemperatureController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="143" column="68" lean-forward="false" selection-start-line="143" selection-start-column="68" selection-end-line="143" selection-end-column="68" />
+            <state relative-caret-position="1725">
+              <caret line="177" column="32" lean-forward="true" selection-start-line="177" selection-start-column="32" selection-end-line="177" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2266#2267#0" expanded="true" />
+                <element signature="e#2340#2341#0" expanded="true" />
+                <element signature="e#2381#2382#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XSSFDrawing.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Downloads/poi-bin-3.17-20170915/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFDrawing.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#22712#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,6 +175,7 @@
       <find>nacz</find>
       <find>nacze</find>
       <find>temperatury</find>
+      <find>Pojawi</find>
       <find>marg</find>
     </findStrings>
   </component>
@@ -135,18 +190,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java" />
         <option value="$USER_HOME$/Downloads/poi-bin-3.17-20170915/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFSheet.class" />
-        <option value="$PROJECT_DIR$/src/com/temp/model/Temperature.java" />
         <option value="$PROJECT_DIR$/src/com/temp/model/TempExcel.java" />
         <option value="$PROJECT_DIR$/src/com/temp/mapper/TemperatureMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/temp/view/temperature.fxml" />
         <option value="$PROJECT_DIR$/src/com/temp/Main.java" />
         <option value="$PROJECT_DIR$/src/com/temp/model/Truck.java" />
-        <option value="$PROJECT_DIR$/src/com/temp/view/TemperatureController.java" />
+        <option value="$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/temp/builder/Helper.java" />
+        <option value="$PROJECT_DIR$/src/com/temp/model/Temperature.java" />
         <option value="$PROJECT_DIR$/naczepy.csv" />
         <option value="$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/temp/view/TemperatureController.java" />
+        <option value="$PROJECT_DIR$/src/com/temp/helper/TruckHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/temp/view/temperature.fxml" />
       </list>
     </option>
   </component>
@@ -209,11 +265,6 @@
             <path>
               <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
               <item name="temperatury" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
-              <item name="temperatury" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -221,27 +272,6 @@
               <item name="temperatury" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="temp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
-              <item name="temperatury" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="builder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
-              <item name="temperatury" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
-              <item name="temperatury" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
@@ -257,6 +287,11 @@
               <item name="temp" type="462c0819:PsiDirectoryNode" />
               <item name="widget" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="temperatury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="temperatury" type="462c0819:PsiDirectoryNode" />
+              <item name="temperatury" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -269,12 +304,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/commons-csv-1.5-bin/commons-csv-1.5/commons-csv-1.5.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.1484375" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="temperatury" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\temperatury\images" />
       <recent name="C:\temperatury" />
       <recent name="C:\temperatury\resources" />
     </key>
@@ -436,7 +476,7 @@
       <workItem from="1510170261227" duration="3385000" />
       <workItem from="1510338465026" duration="10159000" />
       <workItem from="1510349974939" duration="2999000" />
-      <workItem from="1514027837871" duration="12686000" />
+      <workItem from="1514027837871" duration="18341000" />
     </task>
     <servers />
   </component>
@@ -446,7 +486,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29229000" />
+    <option name="totallyTimeSpent" value="34884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -459,13 +499,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -492,18 +532,30 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java</url>
-          <line>281</line>
+          <line>255</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/temp/builder/Helper.java</url>
-          <line>11</line>
+          <line>15</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/temp/helper/TruckHelper.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -522,6 +574,10 @@
           <caret line="147" column="5" lean-forward="false" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2381#2382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -568,6 +624,10 @@
           <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2381#2382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -576,14 +636,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding>
-            <element signature="e#2821#2822#0" expanded="true" />
-            <element signature="e#2860#2861#0" expanded="true" />
-            <element signature="e#2912#2913#0" expanded="true" />
-            <element signature="e#2959#2960#0" expanded="true" />
-            <element signature="e#3009#3010#0" expanded="true" />
-            <element signature="e#3042#3043#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,6 +682,10 @@
           <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2381#2382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -668,32 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
           <caret line="2524" column="16" lean-forward="false" selection-start-line="2524" selection-start-column="16" selection-end-line="2524" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/temp/model/Temperature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="e#2821#2822#0" expanded="true" />
-            <element signature="e#2860#2861#0" expanded="true" />
-            <element signature="e#2912#2913#0" expanded="true" />
-            <element signature="e#2959#2960#0" expanded="true" />
-            <element signature="e#3009#3010#0" expanded="true" />
-            <element signature="e#3042#3043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/temp/view/temperature.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -812,39 +843,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/temp/builder/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/poi-ooxml-3.17-sources.jar!/org/apache/poi/xssf/usermodel/XSSFCellStyle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/temp/view/TemperatureController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="143" column="68" lean-forward="false" selection-start-line="143" selection-start-column="68" selection-end-line="143" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,21 +867,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/poi-ooxml-3.17-sources.jar!/org/apache/poi/xssf/usermodel/XSSFDrawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="255" column="51" lean-forward="true" selection-start-line="255" selection-start-column="51" selection-end-line="255" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/temp/model/Temperature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1529">
+          <caret line="164" column="5" lean-forward="false" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+          <folding>
+            <element signature="e#3550#3551#0" expanded="true" />
+            <element signature="e#3582#3583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/poi-bin-3.17-20170915/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFDrawing.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/temp/builder/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-968">
+          <caret line="311" column="11" lean-forward="false" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/RenderingHints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1597">
+          <caret line="736" column="31" lean-forward="false" selection-start-line="736" selection-start-column="31" selection-end-line="736" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/temp/builder/TextBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="142" column="36" lean-forward="false" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/temp/view/TemperatureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="177" column="32" lean-forward="true" selection-start-line="177" selection-start-column="32" selection-end-line="177" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2381#2382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/naczepy.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="8" />
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/temp/builder/ExcelBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="289" column="19" lean-forward="true" selection-start-line="289" selection-start-column="19" selection-end-line="289" selection-end-column="19" />
+        <state relative-caret-position="285">
+          <caret line="52" column="24" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/temp/helper/TruckHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/temp/view/temperature.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="85" column="103" lean-forward="false" selection-start-line="85" selection-start-column="103" selection-end-line="85" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -83,7 +83,7 @@
                             <children>
                                 <Label prefHeight="17.0" prefWidth="155.0" text="Rejestracja"/>
                                 <Label prefHeight="17.0" prefWidth="118.0" text="Numer pliku" GridPane.rowIndex="1"/>
-                                <TextField fx:id="registeryField" GridPane.columnIndex="1"/>
+                                <ComboBox fx:id="registeryField" GridPane.columnIndex="1" minWidth="150"/>
                                 <TextField fx:id="fileNumber" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
                             </children>

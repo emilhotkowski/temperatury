@@ -6,6 +6,10 @@ public class Helper {
 
     public static Random random = new Random();
 
+    public static double roundMe(double rand) {
+        return (double)Math.round(rand*10)/10;
+    }
+
     public static double randTemp(float temp, float diff) {
         float rand = random.nextFloat() * diff;
         rand = (float) Math.round(rand * 10) / 10;
@@ -32,6 +36,7 @@ public class Helper {
     }
 
     public static int calcSizePoints(double cm) {
-        return (int) (cm * 100 * 0.2835);
+        return (int)(cm*100*0.32);
+
     }
 }

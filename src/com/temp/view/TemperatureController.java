@@ -2,12 +2,16 @@ package com.temp.view;
 
 import com.temp.Main;
 import com.temp.builder.ExcelBuilder;
+import com.temp.helper.TruckHelper;
 import com.temp.model.Temperature;
+import com.temp.model.Truck;
 import com.temp.widget.MaskField;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.StringConverter;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 
 public class TemperatureController {
@@ -33,7 +37,7 @@ public class TemperatureController {
     @FXML
     private TextField diffField;
     @FXML
-    private TextField registeryField;
+    private ComboBox<Truck> registeryField;
     @FXML
     private TextField fileNumber;
     @FXML
@@ -68,6 +72,19 @@ public class TemperatureController {
 
         tempTwoField.setDisable(true);
         tempTwoLabel.setDisable(true);
+
+       TruckHelper.getTruckList().forEach(e -> registeryField.getItems().add(e));
+       registeryField.setConverter(new StringConverter<Truck>() {
+           @Override
+           public String toString(Truck object) {
+               return object.getRejestracja();
+           }
+
+           @Override
+           public Truck fromString(String string) {
+               return null;
+           }
+       });
     }
 
     private void disableFields(Temperature newValue) {
@@ -99,7 +116,7 @@ public class TemperatureController {
             oldValue.setTemp2(Float.valueOf(tempTwoField.getText()));
         oldValue.setDiff(Float.valueOf(diffField.getText()));
         oldValue.setHasSecond(secondTempCheckBox.selectedProperty().getValue());
-        oldValue.setRegistery(registeryField.getText());
+        oldValue.setRegistery(registeryField.getValue().getRejestracja());
         oldValue.setFileNumber(fileNumber.getText());
     }
 
@@ -126,6 +143,11 @@ public class TemperatureController {
     @FXML
     private void deleteTemperature() {
         mainApp.getTemperatures().remove(tempTable.getSelectionModel().getSelectedItem());
+        int i = 1;
+        for (Temperature temperature : mainApp.getTemperatures()) {
+            temperature.setId("Temperatura " + i++);
+        }
+        Temperature.number = i-1;
     }
 
     @FXML
@@ -134,16 +156,29 @@ public class TemperatureController {
         saveFromFields(tempTable.getSelectionModel().getSelectedItem());//zapisujemy aktualne wartosci dla pewnosci
 
         //TODO : walidacja pol?
+        Exception ex = null;
 
         ExcelBuilder excelBuilder = new ExcelBuilder();
+        boolean error = false;
         try {
-            String name = registeryField.getText();
+            String name = registeryField.getValue().getRejestracja();
             if(fileNumber.getText() != null && !fileNumber.getText().equals("")) {
                 name += " " + fileNumber.getText();
             }
-            excelBuilder.buildExcel(mainApp.getTemperatures(), name , registeryField.getText());
+            excelBuilder.buildExcel(mainApp.getTemperatures(), name , registeryField.getValue().getRejestracja());
         } catch (Exception e) {
+            error = true;
+            ex= e;
             e.printStackTrace();
+        }
+
+        if(error) {
+            String blad = Arrays.stream(ex.getStackTrace()).map(a -> a.toString()).reduce((s, s2) -> {return s + "\n" +s2;}).get();
+            Alert alert = new Alert(Alert.AlertType.ERROR.CONFIRMATION, "Pojawił się błąd "+ blad , ButtonType.OK);
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Temperatura stworzona pod nazwa : " + registeryField.getValue().getRejestracja() + ".xlsx", ButtonType.OK);
+            alert.showAndWait();
         }
     }
 

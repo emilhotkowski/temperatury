@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 public class Temperature {
 
-    static Integer number = 0;
     private ObjectProperty<LocalDate> dateFrom;
     private StringProperty timeFrom;
     private ObjectProperty<LocalDate> dateTo;
@@ -18,6 +17,10 @@ public class Temperature {
     private StringProperty fileNumber;
     private StringProperty id;
     private BooleanProperty hasSecond;
+
+    static public Integer number = 0;
+
+
     public Temperature() {
         number++;
         id = new SimpleStringProperty();
@@ -156,7 +159,12 @@ public class Temperature {
         this.hasSecond.set(hasSecond);
     }
 
+
     public BooleanProperty hasSecondProperty() {
         return hasSecond;
+    }
+    public void setId(String id) {
+        this.id.set(id);
+
     }
 }

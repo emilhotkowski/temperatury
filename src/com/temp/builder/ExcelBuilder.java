@@ -1,5 +1,6 @@
 package com.temp.builder;
 
+import com.temp.helper.TruckHelper;
 import com.temp.model.Temperature;
 import com.temp.model.Truck;
 import javafx.collections.ObservableList;
@@ -42,33 +43,12 @@ public class ExcelBuilder {
         saveExcel(name);
     }
 
-    private void getCSVData(String registery) {
-        naczepy = new ArrayList<>();
-        Reader in = null;
-        try {
-            in = new FileReader("naczepy.csv");
-            Iterable<CSVRecord> records = CSVFormat.EXCEL.withHeader().withDelimiter(';').parse(in);
-            for (CSVRecord record : records) {
-                Truck truck = new Truck();
-                truck.setRejestracja(record.get("Rejestracja"));
-                truck.setTkUnitId(record.get("TkUnitId"));
-                truck.setRevision(record.get("Revision"));
-                truck.setAgregat(record.get("Agregat"));
-
-                naczepy.add(truck);
-
-                if (registery.equals(truck.getRejestracja())) {
-                    accTruck = truck;
-                }
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void getCSVData(String registery) throws IOException {
+        //TODO: getAccTruck
+        accTruck = TruckHelper.getByName(registery);
 
         if (accTruck != null) {
-            try {
+
                 if(accTruck.getAgregat().equals("thermo king")) {
                     IMG_HEIGHT = 90;
                     IMG_WIDTH = 227;
@@ -77,28 +57,28 @@ public class ExcelBuilder {
                     IMG_HEIGHT = 91;
                     IMG_WIDTH = 243;
                 }
-                BufferedImage originalImage = ImageIO.read(new File("resources/" + accTruck.getAgregat() + ".png"));
+                BufferedImage originalImage = ImageIO.read(new File("images\\" + accTruck.getAgregat() + ".png"));
                 int type = originalImage.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
 
-                BufferedImage resized = resizeImage(originalImage, type);
+                Image resized = originalImage.getScaledInstance(IMG_WIDTH, IMG_HEIGHT, Image.SCALE_SMOOTH);
+                BufferedImage bufferedImage = resizeImage(resized, type);
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                ImageIO.write( resized, "png", baos );
+                ImageIO.write( bufferedImage, "png", baos );
                 baos.flush();
                 byte[] imageInByte = baos.toByteArray();
                 baos.close();
 
                 pictureureIdx = workbook.addPicture(imageInByte, Workbook.PICTURE_TYPE_PNG);
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
 
         }
     }
 
-    private static BufferedImage resizeImage(BufferedImage originalImage, int type){
+
+
+    private static BufferedImage resizeImage(Image originalImage, int type){
         BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
         Graphics2D g = resizedImage.createGraphics();
         g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
@@ -108,6 +88,8 @@ public class ExcelBuilder {
     }
 
     private void configureSpreadsheet() {
+        //spreadsheet.setMargin(MARGIN);
+
         //col sizes
         int i = 0;
         for (double colSize : colSizes) {
@@ -286,11 +268,61 @@ public class ExcelBuilder {
     private void saveExcel(String name) {
         FileOutputStream out = null;
         try {
-            out = new FileOutputStream(new File( "temperatury/" + name + ".xlsx"));
+            out = new FileOutputStream(new File("temperatury\\" + name+ ".xlsx"));
             workbook.write(out);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Nie mozna zapisac pliku",e );
         }
+    }
+
+    public BufferedImage getScaledInstance(BufferedImage img,
+                                           int targetWidth,
+                                           int targetHeight,
+                                           Object hint,
+                                           boolean higherQuality)
+    {
+        int type = (img.getTransparency() == Transparency.OPAQUE) ?
+                BufferedImage.TYPE_INT_RGB : BufferedImage.TYPE_INT_ARGB;
+        BufferedImage ret = (BufferedImage)img;
+        int w, h;
+        if (higherQuality) {
+            // Use multi-step technique: start with original size, then
+            // scale down in multiple passes with drawImage()
+            // until the target size is reached
+            w = img.getWidth();
+            h = img.getHeight();
+        } else {
+            // Use one-step technique: scale directly from original
+            // size to target size with a single drawImage() call
+            w = targetWidth;
+            h = targetHeight;
+        }
+
+        do {
+            if (higherQuality && w > targetWidth) {
+                w /= 2;
+                if (w < targetWidth) {
+                    w = targetWidth;
+                }
+            }
+
+            if (higherQuality && h > targetHeight) {
+                h /= 2;
+                if (h < targetHeight) {
+                    h = targetHeight;
+                }
+            }
+
+            BufferedImage tmp = new BufferedImage(w, h, type);
+            Graphics2D g2 = tmp.createGraphics();
+            g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, hint);
+            g2.drawImage(ret, 0, 0, w, h, null);
+            g2.dispose();
+
+            ret = tmp;
+        } while (w != targetWidth || h != targetHeight);
+
+        return ret;
     }
 
 }
