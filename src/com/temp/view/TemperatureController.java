@@ -2,10 +2,8 @@ package com.temp.view;
 
 import com.temp.Main;
 import com.temp.builder.ExcelBuilder;
-import com.temp.model.TempType;
 import com.temp.model.Temperature;
 import com.temp.widget.MaskField;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -37,7 +35,7 @@ public class TemperatureController {
     @FXML
     private TextField registeryField;
     @FXML
-    private ComboBox<TempType> typeComboBox;
+    private TextField fileNumber;
     @FXML
     private CheckBox secondTempCheckBox;
     @FXML
@@ -54,24 +52,22 @@ public class TemperatureController {
         tempColumn.setCellValueFactory(cellData -> cellData.getValue().getId());
 
         tempTable.getSelectionModel().selectedItemProperty().addListener((
-                    (observable, oldValue, newValue) -> {
-                        //zapisujemy dane z pol do poprzedniej temp
-                        if(oldValue != null)
-                            saveFromFields(oldValue);
+                (observable, oldValue, newValue) -> {
+                    //zapisujemy dane z pol do poprzedniej temp
+                    if (oldValue != null)
+                        saveFromFields(oldValue);
 
-                        //ustaw dane z temperatury do pol
-                        if(newValue != null)
-                            saveToFields(newValue);
+                    //ustaw dane z temperatury do pol
+                    if (newValue != null)
+                        saveToFields(newValue);
 
-                        //jesli nowa wartosc nie jest pierwsza, zamknij pola 
-                        disableFields(newValue);
-                    }
-                ));
+                    //jesli nowa wartosc nie jest pierwsza, zamknij pola
+                    disableFields(newValue);
+                }
+        ));
 
         tempTwoField.setDisable(true);
         tempTwoLabel.setDisable(true);
-
-        typeComboBox.setItems(FXCollections.observableArrayList(TempType.CARRIER, TempType.THERMO_KING));
     }
 
     private void disableFields(Temperature newValue) {
@@ -99,12 +95,12 @@ public class TemperatureController {
         oldValue.setTimeFrom(timeFromField.getPlainText());
         oldValue.setTimeTo(timeToField.getPlainText());
         oldValue.setTemp(Float.valueOf(tempOneField.getText()));
-        if(tempTwoField.getText() != null)
+        if (tempTwoField.getText() != null)
             oldValue.setTemp2(Float.valueOf(tempTwoField.getText()));
         oldValue.setDiff(Float.valueOf(diffField.getText()));
         oldValue.setHasSecond(secondTempCheckBox.selectedProperty().getValue());
         oldValue.setRegistery(registeryField.getText());
-        oldValue.setType(typeComboBox.getValue());
+        oldValue.setFileNumber(fileNumber.getText());
     }
 
     /**
@@ -141,7 +137,11 @@ public class TemperatureController {
 
         ExcelBuilder excelBuilder = new ExcelBuilder();
         try {
-            excelBuilder.buildExcel(mainApp.getTemperatures(), registeryField.getText());
+            String name = registeryField.getText();
+            if(fileNumber.getText() != null && !fileNumber.getText().equals("")) {
+                name += " " + fileNumber.getText();
+            }
+            excelBuilder.buildExcel(mainApp.getTemperatures(), name , registeryField.getText());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -156,7 +156,7 @@ public class TemperatureController {
     @FXML
     private void changeDateFrom() {
         LocalDate accDate = dateFromField.getValue();
-        if(accDate != null && dateToField.getValue() == null)
+        if (accDate != null && dateToField.getValue() == null)
             dateToField.setValue(accDate);
     }
 

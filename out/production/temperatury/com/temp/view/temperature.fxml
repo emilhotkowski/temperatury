@@ -1,98 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import com.temp.widget.MaskField?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1"
+            fx:controller="com.temp.view.TemperatureController">
+    <children>
+        <SplitPane dividerPositions="0.29797979797979796" layoutX="183.0" layoutY="86.0" prefHeight="400.0"
+                   prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TableView fx:id="tempTable" layoutY="52.0" prefHeight="398.0" prefWidth="175.0"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="tempColumn" prefWidth="174.0" text="Temperatury"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Button layoutX="71.0" layoutY="359.0" mnemonicParsing="false" onAction="#deleteTemperature"
+                                text="Usuń"/>
+                        <GridPane layoutX="8.0" layoutY="43.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+                                  AnchorPane.topAnchor="30.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="171.0" text="Data od"/>
+                                <Label prefHeight="17.0" prefWidth="208.0" text="Godzina od" GridPane.rowIndex="1"/>
+                                <Label prefHeight="17.0" prefWidth="168.0" text="Data do" GridPane.rowIndex="2"/>
+                                <Label prefHeight="17.0" prefWidth="185.0" text="Godzina do" GridPane.rowIndex="3"/>
+                                <Label prefHeight="17.0" prefWidth="137.0" text="Temperatura 1" GridPane.rowIndex="4"/>
+                                <Label fx:id="tempTwoLabel" prefHeight="17.0" prefWidth="157.0" text="Temperatura 2"
+                                       GridPane.rowIndex="7"/>
+                                <Label prefHeight="17.0" prefWidth="100.0" text="Różnica" GridPane.rowIndex="5"/>
+                                <DatePicker fx:id="dateFromField" onAction="#changeDateFrom" GridPane.columnIndex="1"/>
+                                <MaskField fx:id="timeFromField" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                                           mask="DD:DD"/>
+                                <DatePicker fx:id="dateToField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                <MaskField fx:id="timeToField" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                                           mask="DD:DD"/>
+                                <TextField fx:id="tempOneField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
-<?import com.temp.widget.MaskField ?>
+                                <TextField fx:id="diffField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                                <CheckBox fx:id="secondTempCheckBox" mnemonicParsing="false"
+                                          onAction="#secondTempAction" text="Drugi czujnik" GridPane.rowIndex="6"/>
+                                <TextField fx:id="tempTwoField" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.temp.view.TemperatureController">
-   <children>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="183.0" layoutY="86.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <TableView fx:id="tempTable" layoutY="52.0" prefHeight="398.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columns>
-                      <TableColumn fx:id="tempColumn" prefWidth="174.0" text="Temperatury" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Button layoutX="71.0" layoutY="359.0" mnemonicParsing="false" onAction="#deleteTemperature" text="Usuń" />
-                  <GridPane layoutX="8.0" layoutY="43.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Label prefHeight="17.0" prefWidth="171.0" text="Data od" />
-                        <Label prefHeight="17.0" prefWidth="208.0" text="Godzina od" GridPane.rowIndex="1" />
-                        <Label prefHeight="17.0" prefWidth="168.0" text="Data do" GridPane.rowIndex="2" />
-                        <Label prefHeight="17.0" prefWidth="185.0" text="Godzina do" GridPane.rowIndex="3" />
-                        <Label prefHeight="17.0" prefWidth="137.0" text="Temperatura 1" GridPane.rowIndex="4" />
-                        <Label fx:id="tempTwoLabel" prefHeight="17.0" prefWidth="157.0" text="Temperatura 2" GridPane.rowIndex="7" />
-                        <Label prefHeight="17.0" prefWidth="100.0" text="Różnica" GridPane.rowIndex="5" />
-                        <DatePicker fx:id="dateFromField" onAction="#changeDateFrom" GridPane.columnIndex="1" />
-                         <MaskField fx:id="timeFromField" GridPane.columnIndex="1" GridPane.rowIndex="1" mask="DD:DD"/>
-                        <DatePicker fx:id="dateToField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                         <MaskField fx:id="timeToField" GridPane.columnIndex="1" GridPane.rowIndex="3" mask="DD:DD"/>
-                        <TextField fx:id="tempOneField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            </children>
+                        </GridPane>
 
-                        <TextField fx:id="diffField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <CheckBox fx:id="secondTempCheckBox" mnemonicParsing="false" onAction="#secondTempAction" text="Drugi czujnik" GridPane.rowIndex="6" />
-                         <TextField fx:id="tempTwoField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <GridPane layoutX="14.0" layoutY="294.0" prefHeight="60.0" prefWidth="407.0"
+                                  AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="294.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="155.0" text="Rejestracja"/>
+                                <Label prefHeight="17.0" prefWidth="118.0" text="Numer pliku" GridPane.rowIndex="1"/>
+                                <TextField fx:id="registeryField" GridPane.columnIndex="1"/>
+                                <TextField fx:id="fileNumber" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-                     </children>
-                  </GridPane>
-
-                  <GridPane layoutX="14.0" layoutY="294.0" prefHeight="60.0" prefWidth="407.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="294.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Label prefHeight="17.0" prefWidth="155.0" text="Rejestracja" />
-                        <Label prefHeight="17.0" prefWidth="118.0" text="Rodzaj temperatury" GridPane.rowIndex="1" />
-                         <TextField fx:id="registeryField" GridPane.columnIndex="1" />
-                        <ComboBox fx:id="typeComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-                     </children>
-                  </GridPane>
-                   <Button fx:id="addButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#addTemperature" text="Dodaj" />
-                   <Button fx:id="createButton" layoutX="351.0" layoutY="359.0" mnemonicParsing="false" onAction="#createTemperature" text="Stwórz" />
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+                            </children>
+                        </GridPane>
+                        <Button fx:id="addButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false"
+                                onAction="#addTemperature" text="Dodaj"/>
+                        <Button fx:id="createButton" layoutX="351.0" layoutY="359.0" mnemonicParsing="false"
+                                onAction="#createTemperature" text="Stwórz"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
 </AnchorPane>

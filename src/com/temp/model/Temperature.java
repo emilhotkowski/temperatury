@@ -3,12 +3,21 @@ package com.temp.model;
 import javafx.beans.property.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Temperature {
 
     static Integer number = 0;
-
+    private ObjectProperty<LocalDate> dateFrom;
+    private StringProperty timeFrom;
+    private ObjectProperty<LocalDate> dateTo;
+    private StringProperty timeTo;
+    private FloatProperty temp;
+    private FloatProperty temp2;
+    private FloatProperty diff;
+    private StringProperty registery;
+    private StringProperty fileNumber;
+    private StringProperty id;
+    private BooleanProperty hasSecond;
     public Temperature() {
         number++;
         id = new SimpleStringProperty();
@@ -22,129 +31,117 @@ public class Temperature {
         temp2 = new SimpleFloatProperty();
         diff = new SimpleFloatProperty();
         registery = new SimpleStringProperty();
-        type = new SimpleObjectProperty<TempType>();
+        fileNumber = new SimpleStringProperty();
         hasSecond = new SimpleBooleanProperty();
 
     }
 
-    private ObjectProperty<LocalDate> dateFrom;
-    private StringProperty timeFrom;
-    private ObjectProperty<LocalDate> dateTo;
-    private StringProperty timeTo;
-    private FloatProperty temp;
-    private FloatProperty temp2;
-    private FloatProperty diff;
-    private StringProperty registery;
-    private ObjectProperty<TempType> type;
-    private StringProperty id;
-    private BooleanProperty hasSecond;
-
     public LocalDate getDateFrom() {
         return dateFrom.get();
-    }
-
-    public ObjectProperty<LocalDate> dateFromProperty() {
-        return dateFrom;
     }
 
     public void setDateFrom(LocalDate dateFrom) {
         this.dateFrom.set(dateFrom);
     }
 
-    public String getTimeFrom() {
-        return timeFrom.get();
+    public ObjectProperty<LocalDate> dateFromProperty() {
+        return dateFrom;
     }
 
-    public StringProperty timeFromProperty() {
-        return timeFrom;
+    public String getTimeFrom() {
+        return timeFrom.get();
     }
 
     public void setTimeFrom(String timeFrom) {
         this.timeFrom.set(timeFrom);
     }
 
-    public LocalDate getDateTo() {
-        return dateTo.get();
+    public StringProperty timeFromProperty() {
+        return timeFrom;
     }
 
-    public ObjectProperty<LocalDate> dateToProperty() {
-        return dateTo;
+    public LocalDate getDateTo() {
+        return dateTo.get();
     }
 
     public void setDateTo(LocalDate dateTo) {
         this.dateTo.set(dateTo);
     }
 
-    public String getTimeTo() {
-        return timeTo.get();
+    public ObjectProperty<LocalDate> dateToProperty() {
+        return dateTo;
     }
 
-    public StringProperty timeToProperty() {
-        return timeTo;
+    public String getTimeTo() {
+        return timeTo.get();
     }
 
     public void setTimeTo(String timeTo) {
         this.timeTo.set(timeTo);
     }
 
-    public float getTemp() {
-        return temp.get();
+    public StringProperty timeToProperty() {
+        return timeTo;
     }
 
-    public FloatProperty tempProperty() {
-        return temp;
+    public float getTemp() {
+        return temp.get();
     }
 
     public void setTemp(float temp) {
         this.temp.set(temp);
     }
 
-    public float getDiff() {
-        return diff.get();
+    public FloatProperty tempProperty() {
+        return temp;
     }
 
-    public FloatProperty diffProperty() {
-        return diff;
+    public float getDiff() {
+        return diff.get();
     }
 
     public void setDiff(float diff) {
         this.diff.set(diff);
     }
 
-    public String getRegistery() {
-        return registery.get();
+    public FloatProperty diffProperty() {
+        return diff;
     }
 
-    public StringProperty registeryProperty() {
-        return registery;
+    public String getRegistery() {
+        return registery.get();
     }
 
     public void setRegistery(String registery) {
         this.registery.set(registery);
     }
 
-    public TempType getType() {
-        return type.get();
+    public StringProperty registeryProperty() {
+        return registery;
     }
 
-    public ObjectProperty<TempType> typeProperty() {
-        return type;
+    public String getFileNumber() {
+        return fileNumber.get();
     }
 
-    public void setType(TempType type) {
-        this.type.set(type);
+    public void setFileNumber(String fileNumber) {
+        this.fileNumber.set(fileNumber);
+    }
+
+    public StringProperty fileNumberProperty() {
+        return fileNumber;
     }
 
     public float getTemp2() {
         return temp2.get();
     }
 
-    public FloatProperty temp2Property() {
-        return temp2;
-    }
-
     public void setTemp2(float temp2) {
         this.temp2.set(temp2);
+    }
+
+    public FloatProperty temp2Property() {
+        return temp2;
     }
 
     public StringProperty getId() {
@@ -155,11 +152,11 @@ public class Temperature {
         return hasSecond.get();
     }
 
-    public BooleanProperty hasSecondProperty() {
-        return hasSecond;
-    }
-
     public void setHasSecond(boolean hasSecond) {
         this.hasSecond.set(hasSecond);
+    }
+
+    public BooleanProperty hasSecondProperty() {
+        return hasSecond;
     }
 }

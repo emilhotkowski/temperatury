@@ -16,7 +16,7 @@ public class TempExcel {
     private float diff;
 
     private String regestiry;
-    private TempType type;
+    private String fileNumber;
 
     private boolean hasSecond;
 
@@ -54,7 +54,6 @@ public class TempExcel {
     }
 
 
-
     public float getTemp() {
         return temp;
     }
@@ -87,12 +86,12 @@ public class TempExcel {
         this.regestiry = regestiry;
     }
 
-    public TempType getType() {
-        return type;
+    public String getFileNumber() {
+        return fileNumber;
     }
 
-    public void setType(TempType type) {
-        this.type = type;
+    public void setFileNumber(String fileNumber) {
+        this.fileNumber = fileNumber;
     }
 
     public boolean isHasSecond() {
@@ -114,7 +113,6 @@ public class TempExcel {
                 ", temp2=" + temp2 +
                 ", diff=" + diff +
                 ", regestiry='" + regestiry + '\'' +
-                ", type=" + type +
                 ", hasSecond=" + hasSecond +
                 '}';
     }

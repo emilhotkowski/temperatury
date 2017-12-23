@@ -17,8 +17,12 @@ public class Main extends Application {
     public Main() {
     }
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/temperature.fxml"));
 
@@ -30,11 +34,6 @@ public class Main extends Application {
         TemperatureController controller = loader.getController();
         controller.setMain(this);
 
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
     public ObservableList<Temperature> getTemperatures() {
