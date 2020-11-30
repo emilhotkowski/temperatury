@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 public class TextBuilder {
 
     public static final String DAS_COUNTDOWN_ON_CONTROLLER_OFF = "DAS Countdown ON/Controller Off";
-    private static final String SHUTDOWN_DISEL = "\"Shutdown, Disel, Cycle Sentry\"";
-    private static final String NORMAL_LINE = "\"Modulation, Disel, Continuous\"";
+    private static final String SHUTDOWN_DIESEL = "\"Shutdown, Diesel, Cycle Sentry\"";
+    private static final String NORMAL_LINE = "\"Modulation, Diesel, Continuous\"";
     private List<TempExcel> temps;
     private List<String> excelRows = new ArrayList<>();
     private LocalDateTime accTime;
@@ -128,7 +128,7 @@ public class TextBuilder {
             excelRows.add(getTempTime(1, tempExcel) + "SETPT:       " + tempExcel.getTemp() + " , " + tempExcel.getTemp2());
 
         //shutdown
-        createTypicalRow(tempExcel, 30, true, SHUTDOWN_DISEL);
+        createTypicalRow(tempExcel, 30, true, SHUTDOWN_DIESEL);
 
         for (int i = 0; i < 4; i++) {
             createTypicalRow(tempExcel, 30, true, NORMAL_LINE);
